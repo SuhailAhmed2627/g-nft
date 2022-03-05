@@ -5,6 +5,7 @@ import "./common.css";
 import logo from "../../assets/logo.png";
 import NavButtons from "./NavButtons";
 import HamburgerIcon from "../../assets/hamburger-icon.svg";
+import searchIcon from "../../assets/searchicon.svg";
 import CloseIcon from "../../assets/close-icon.png";
 import { useNavigate } from "react-router-dom";
 import { mobileNavWidth } from "../../utils/constants";
@@ -56,6 +57,22 @@ const Navbar = () => {
 							<p className={styles.navLogoText}>Graphique NFT</p>
 						) : null}
 					</div>
+					{screenWidth < mobileNavWidth && !isNavOpen ? (
+						<div className={styles.searchBarContainer}>
+							<div className={styles.searchBar}>
+								<img
+									className={styles.searchBarIcon}
+									src={searchIcon}
+									alt="Search Icon"
+								/>
+								<input
+									className={styles.searchInput}
+									placeholder="Search Item Here"
+									type="text"
+								/>
+							</div>
+						</div>
+					) : null}
 					{screenWidth > mobileNavWidth ? (
 						<NavButtons currentWidth={screenWidth} />
 					) : isNavOpen ? (
