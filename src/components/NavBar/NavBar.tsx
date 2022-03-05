@@ -1,15 +1,22 @@
 import styles from "./NavBar.module.css";
+import { useState, useEffect } from "react";
 import "./common.css";
 import logo from "../../../public/assets/logo.png";
 import NavButtons from "./NavButtons";
-// import HamburgerIcon from "../../assets/hamburger-icon.svg";
-// import CloseIcon from "../../assets/close-icon.png";
+import HamburgerIcon from "../../../public/assets/hamburger-icon.svg";
+import CloseIcon from "../../../public/assets/close-icon.png";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
 const Navbar = () => {
-	const screenWidth = window.innerWidth;
+	const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		window.addEventListener("resize", () => {
+			setScreenWidth(window.innerWidth);
+		});
+	}, []);
 
 	const toggleMobileNav = () => {
 		const mobileNav = document.getElementById("mobileNav");
@@ -22,7 +29,6 @@ const Navbar = () => {
 			e.target !== mobileNav &&
 			e.currentTarget.contains(e.target as Node)
 		) {
-			console.log(e.target, e.currentTarget);
 			toggleMobileNav();
 		}
 	};
@@ -51,7 +57,7 @@ const Navbar = () => {
 						<img
 							className={styles.hamburgerIcon}
 							onClick={toggleMobileNav}
-							src={"HamburgerIcon"}
+							src={HamburgerIcon}
 							alt="Nav Menu"
 						/>
 					)}
@@ -66,7 +72,7 @@ const Navbar = () => {
 							<div className={styles.closeIconContainer}>
 								<img
 									className={styles.closeIcon}
-									src={"CloseIcon"}
+									src={CloseIcon}
 									alt="Close Icon"
 								/>
 							</div>

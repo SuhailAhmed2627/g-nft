@@ -29,12 +29,15 @@
 	color: var(--white);
 	margin: auto;
 	margin-left: 0.7rem;
+	font-family: "Gotham", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .searchBarIcon {
 	margin: 0.5rem;
 }
 .searchInput {
 	width: 100%;
+	caret-color: var(--white);
+	color: var(--white);
 }
 .searchInput::placeholder {
 	color: var(--white);
@@ -94,6 +97,10 @@
 	.navLogo {
 		max-height: 35px;
 	}
+	.navButton > button {
+		width: 20px;
+		font-size: 15px;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -107,6 +114,7 @@
 		margin-left: 0px;
 	}
 	.hamburgerIcon {
+		margin: auto;
 		margin-right: 2rem;
 		cursor: pointer;
 		width: auto;
@@ -122,7 +130,7 @@
 		background-color: #0c0c0c;
 		width: 100%;
 		height: 100%;
-		z-index: 1;
+		z-index: 500;
 	}
 	.navButtons {
 		flex-direction: column;
