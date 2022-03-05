@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./NavBar.module.css";
 import { useState, useEffect } from "react";
 import "./common.css";
-import logo from "../../../public/assets/logo.png";
+import logo from "../../assets/logo.png";
 import NavButtons from "./NavButtons";
-import HamburgerIcon from "../../../public/assets/hamburger-icon.svg";
-import CloseIcon from "../../../public/assets/close-icon.png";
+import HamburgerIcon from "../../assets/hamburger-icon.svg";
+import CloseIcon from "../../assets/close-icon.png";
 import { useNavigate } from "react-router-dom";
 import { mobileNavWidth } from "../../utils/constants";
 
@@ -52,7 +52,9 @@ const Navbar = () => {
 							alt="G-NFT Logo"
 							className={styles.navLogoImg}
 						/>
-						<p className={styles.navLogoText}>Graphique NFT</p>
+						{screenWidth > 900 ? (
+							<p className={styles.navLogoText}>Graphique NFT</p>
+						) : null}
 					</div>
 					{screenWidth > mobileNavWidth ? (
 						<NavButtons currentWidth={screenWidth} />

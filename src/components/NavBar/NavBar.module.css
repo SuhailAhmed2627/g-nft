@@ -80,6 +80,11 @@
 }
 
 .navButtonBorderGradient {
+	background-image: var(--red-linear);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
 	border: 2px solid var(--red-violet);
 }
 
@@ -150,8 +155,7 @@
 		display: flex;
 		justify-content: center;
 		margin-top: auto;
-		margin-left: 2rem;
-		margin-right: 2rem;
+		max-width: 100vh;
 	}
 	.navButton > button {
 		width: inherit;

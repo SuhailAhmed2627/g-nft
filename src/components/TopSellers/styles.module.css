@@ -1,5 +1,67 @@
 .outerContainer {
-	background-color: aquamarine;
 	width: 100%;
 	height: 35%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+
+.cardContainer {
+	width: 100%;
+	height: 100%;
+	max-width: 180px;
+	max-height: 200px;
+	background-color: var(--black-3);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.cardIndexContainer {
+	width: 100%;
+	text-align: left;
+}
+.cardIndex {
+	border-radius: 50%;
+	background-color: var(--red-violet);
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0.6rem;
+	margin-left: 0.6rem;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 16px;
+}
+.cardImgContainer {
+	position: relative;
+}
+.sellerImg {
+	border-radius: 50%;
+}
+.checkImgContainer {
+	position: absolute;
+	background-color: #00b347;
+	height: 17px;
+	width: 17px;
+	border-radius: 50%;
+	bottom: 0%;
+	right: 0%;
+}
+.checkImg {
+	color: var(--white);
+	border-radius: 50%;
+	height: 8px;
+}
+.cardName {
+	color: var(--white);
+}
+.cardValue {
+	color: var(--white);
+	margin-bottom: 1rem;
 }

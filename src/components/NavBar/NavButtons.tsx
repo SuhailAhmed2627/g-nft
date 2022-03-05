@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { PropTypes } from "./types";
 import { mobileNavWidth } from "../../utils/constants";
-import searchIcon from "../../../public/assets/searchicon.svg";
+import searchIcon from "../../assets/searchicon.svg";
 
 const NavButtons = (props: PropTypes) => {
 	return (
