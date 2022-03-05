@@ -8,7 +8,7 @@
 }
 
 .tag {
-	font-family: Gotham;
+	font-family: "Gotham";
 	font-style: normal;
 	font-weight: bold;
 	font-size: 48px;
@@ -28,4 +28,23 @@
 
 .circle2 {
 	transform: translate(110%, 40%);
+}
+
+@media screen and (max-width: 900px) {
+	.tag {
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.tag {
+		font-size: 34px;
+	}
+	.tagCard {
+		height: 70%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.tag {
+		font-size: 27px;
+	}
 }

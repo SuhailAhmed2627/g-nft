@@ -22,7 +22,7 @@ const TopSellers = () => {
 				return (
 					<div className={styles.cardContainer} key={index}>
 						<div className={styles.cardIndexContainer}>
-							<div className={styles.cardIndex}>{index}</div>
+							<div className={styles.cardIndex}>{index + 1}</div>
 						</div>
 						<div className={styles.cardImgContainer}>
 							<img
