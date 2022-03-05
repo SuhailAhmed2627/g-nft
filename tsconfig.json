@@ -6,7 +6,7 @@
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"typeRoots": ["./node_modules/@types", "./node_modules"],
-		"types": ["vite/client"],
+		"types": ["vite/client", "node"],
 		"resolveJsonModule": true,
 		"noEmit": true,
 		"isolatedModules": true,

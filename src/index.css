@@ -5,6 +5,15 @@
 	font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
+html {
+	height: 100vh;
+}
+body,
+#root {
+	height: 100%;
+	width: 100%;
+}
+
 :root {
 	--red-violet: #da18a3;
 	--red-linear: linear-gradient(
@@ -116,4 +125,16 @@ input {
 	outline: none;
 	background: transparent;
 	border: none;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Dark Mode */
+#root {
+	background: var(--dark);
 }

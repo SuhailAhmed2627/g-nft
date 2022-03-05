@@ -1,0 +1,10 @@
+.container {
+	min-width: 50%;
+	max-width: 60%;
+	min-height: 100%;
+	gap: 5%;
+}
+
+.tagCardContainer {
+	height: 35%;
+}

@@ -1,0 +1,31 @@
+.tagCard {
+	height: 90%;
+	background: var(--red-linear);
+	border-radius: 25px;
+	color: #ffffff;
+	padding-left: 7%;
+	padding-right: 7%;
+}
+
+.tag {
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+}
+
+.circle1,
+.circle2 {
+	min-width: 25vh;
+	min-height: 25vh;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.circle1 {
+	transform: translate(-150%, -50%);
+}
+
+.circle2 {
+	transform: translate(110%, 40%);
+}
