@@ -1,2 +1,6 @@
+# Node Modules and Package Lock
 node_modules
 package-lock.json
+
+# Build Folder
+dist
