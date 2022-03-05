@@ -8,6 +8,7 @@
 		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|jsx|tsx|json)\"",
 		"dev": "vite",
 		"build": "tsc && vite build",
+		"tsc": "tsc",
 		"preview": "vite preview"
 	},
 	"repository": {
