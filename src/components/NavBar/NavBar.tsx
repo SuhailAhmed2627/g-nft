@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./NavBar.module.css";
 import { useState, useEffect } from "react";
 import "./common.css";
@@ -6,10 +7,11 @@ import NavButtons from "./NavButtons";
 import HamburgerIcon from "../../../public/assets/hamburger-icon.svg";
 import CloseIcon from "../../../public/assets/close-icon.png";
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import { mobileNavWidth } from "../../utils/constants";
 
 const Navbar = () => {
 	const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+	const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -18,12 +20,13 @@ const Navbar = () => {
 		});
 	}, []);
 
-	const toggleMobileNav = () => {
+	const toggleMobileNav = (): void => {
 		const mobileNav = document.getElementById("mobileNav");
+		setIsNavOpen(!isNavOpen);
 		mobileNav?.classList.toggle("navbarActive");
 	};
 
-	const handleClick = (e: React.MouseEvent) => {
+	const handleClick = (e: React.MouseEvent): void => {
 		const mobileNav = document.getElementById("mobileNav");
 		if (
 			e.target !== mobileNav &&
@@ -51,8 +54,15 @@ const Navbar = () => {
 						/>
 						<p className={styles.navLogoText}>Graphique NFT</p>
 					</div>
-					{screenWidth > 600 ? (
-						<NavButtons />
+					{screenWidth > mobileNavWidth ? (
+						<NavButtons currentWidth={screenWidth} />
+					) : isNavOpen ? (
+						<img
+							className={styles.closeIcon}
+							onClick={toggleMobileNav}
+							src={CloseIcon}
+							alt="Close Icon"
+						/>
 					) : (
 						<img
 							className={styles.hamburgerIcon}
@@ -62,21 +72,14 @@ const Navbar = () => {
 						/>
 					)}
 				</div>
-				{screenWidth < 600 ? (
+				{screenWidth < mobileNavWidth ? (
 					<div
 						className={styles.mobileNav}
 						id="mobileNav"
 						onClick={handleClick}
 					>
 						<div className={styles.mobileNavButtonContainer}>
-							<div className={styles.closeIconContainer}>
-								<img
-									className={styles.closeIcon}
-									src={CloseIcon}
-									alt="Close Icon"
-								/>
-							</div>
-							<NavButtons />
+							<NavButtons currentWidth={screenWidth} />
 						</div>
 					</div>
 				) : null}

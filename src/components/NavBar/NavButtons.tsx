@@ -1,25 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
+import { PropTypes } from "./types";
+import { mobileNavWidth } from "../../utils/constants";
 import searchIcon from "../../../public/assets/searchicon.svg";
 
-const NavButtons = () => {
+const NavButtons = (props: PropTypes) => {
 	return (
 		<>
-			<div className={styles.searchBarContainer}>
-				<div className={styles.searchBar}>
-					<img
-						className={styles.searchBarIcon}
-						src={searchIcon}
-						alt="Search Icon"
-					/>
-					<input
-						className={styles.searchInput}
-						placeholder="Search Item Here"
-						type="text"
-					/>
+			{props.currentWidth > mobileNavWidth ? (
+				<div className={styles.searchBarContainer}>
+					<div className={styles.searchBar}>
+						<img
+							className={styles.searchBarIcon}
+							src={searchIcon}
+							alt="Search Icon"
+						/>
+						<input
+							className={styles.searchInput}
+							placeholder="Search Item Here"
+							type="text"
+						/>
+					</div>
 				</div>
-			</div>
+			) : null}
 			<div className={styles.navButtons}>
 				<Link className={styles.navButton} to="/">
 					Explore
@@ -30,14 +34,33 @@ const NavButtons = () => {
 				<Link className={styles.navButton} to="/">
 					Following
 				</Link>
-				<a className={styles.navButton}>
-					<button className={styles.navButtonGradient}>Create</button>
-				</a>
-				<a className={styles.navButton}>
-					<button className={styles.navButtonBorderGradient}>
-						Connect
-					</button>
-				</a>
+				{props.currentWidth > mobileNavWidth ? (
+					<>
+						<a className={styles.navButton}>
+							<button className={styles.navButtonGradient}>
+								Create
+							</button>
+						</a>
+						<a className={styles.navButton}>
+							<button className={styles.navButtonBorderGradient}>
+								Connect
+							</button>
+						</a>
+					</>
+				) : (
+					<div className={styles.gradientButtonContainer}>
+						<a className={styles.navButton}>
+							<button className={styles.navButtonGradient}>
+								Create
+							</button>
+						</a>
+						<a className={styles.navButton}>
+							<button className={styles.navButtonBorderGradient}>
+								Connect
+							</button>
+						</a>
+					</div>
+				)}
 			</div>
 		</>
 	);
