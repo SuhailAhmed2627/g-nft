@@ -8,6 +8,7 @@
 	justify-content: space-between;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #2d2336;
 }
 .navLogo {
 	max-height: 37px;
@@ -105,13 +106,8 @@
 
 @media screen and (max-width: 700px) {
 	.navLogo {
-		max-height: 30px;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.navLogo {
 		margin-left: 0px;
+		max-height: 30px;
 	}
 	.hamburgerIcon {
 		margin: auto;
@@ -122,31 +118,61 @@
 	}
 	.mobileNav {
 		display: none;
+		animation: mobileNavAnimation 0.5s;
+		height: 100vh;
 	}
 	.mobileNavButtonContainer {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		background-color: #0c0c0c;
+		background-color: var(--black-4);
 		width: 100%;
-		height: 100%;
 		z-index: 500;
 	}
 	.navButtons {
 		flex-direction: column;
+		height: 100vh;
+		margin: 0px;
+		width: 100%;
+		padding-right: 0px;
 	}
 	.navButton {
 		margin-top: 2rem;
+		justify-content: left;
+		margin-left: 2rem;
+		font-size: 20px;
+		font-weight: 600;
+		color: var(--white);
 	}
 	.closeIconContainer {
 		width: 100%;
-		margin-top: 3rem;
 		text-align: right;
 	}
+	.gradientButtonContainer {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: auto;
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+	.navButton > button {
+		width: inherit;
+		font-size: inherit;
+	}
 	.closeIcon {
-		height: auto;
-		width: 20px;
+		margin: auto;
+		width: auto;
+		height: 25px;
 		margin-right: 2rem;
 		cursor: pointer;
+	}
+}
+
+@keyframes mobileNavAnimation {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
 	}
 }
