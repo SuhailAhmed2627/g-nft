@@ -106,4 +106,7 @@ button {
 	border: none;
 	outline: none;
 	background: none;
+	color: #ffffff;
+	border-radius: 10px;
+	padding: 9px 30px;
 }
