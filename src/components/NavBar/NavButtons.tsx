@@ -1,12 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
+import searchIcon from "../../../public/assets/searchicon.svg";
 
 const NavButtons = () => {
 	return (
 		<>
 			<div className={styles.searchBarContainer}>
-				<div className={styles.searchBar}></div>
+				<div className={styles.searchBar}>
+					<img
+						className={styles.searchBarIcon}
+						src={searchIcon}
+						alt="Search Icon"
+					/>
+					<input
+						className={styles.searchInput}
+						placeholder="Search Item Here"
+						type="text"
+					/>
+				</div>
 			</div>
 			<div className={styles.navButtons}>
 				<Link className={styles.navButton} to="/">

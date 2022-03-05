@@ -15,6 +15,29 @@
 	padding: 1rem;
 	padding-left: 2.5rem;
 	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	white-space: nowrap;
+}
+.navLogoImg {
+	width: 21px;
+	height: 25px;
+}
+.navLogoText {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--white);
+	margin: auto;
+	margin-left: 0.7rem;
+}
+.searchBarIcon {
+	margin: 0.5rem;
+}
+.searchInput {
+	width: 100%;
+}
+.searchInput::placeholder {
+	color: var(--white);
 }
 .navButtons {
 	display: flex;
@@ -33,6 +56,10 @@
 	font-weight: 600;
 	font-size: 16px;
 	transition: 0.15s ease-in-out all;
+	white-space: nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .navButton:hover {
 	color: #ffffff;
@@ -55,9 +82,12 @@
 .searchBar {
 	background-color: var(--black-2);
 	height: 40px;
-	width: 90%;
+	width: 97%;
 	margin: auto;
 	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
 }
 
 @media screen and (max-width: 800px) {

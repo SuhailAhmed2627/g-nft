@@ -109,4 +109,11 @@ button {
 	color: #ffffff;
 	border-radius: 10px;
 	padding: 9px 30px;
+	cursor: pointer;
+}
+
+input {
+	outline: none;
+	background: transparent;
+	border: none;
 }

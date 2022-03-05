@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.css";
 import "./common.css";
-// import Logo from "../../assets/logo.svg";
+import logo from "../../../public/assets/logo.png";
 import NavButtons from "./NavButtons";
 // import HamburgerIcon from "../../assets/hamburger-icon.svg";
 // import CloseIcon from "../../assets/close-icon.png";
@@ -32,14 +32,19 @@ const Navbar = () => {
 			<span id="home"></span>
 			<div className={styles.navBarContainer}>
 				<div className={styles.navBar}>
-					<p
+					<div
 						className={styles.navLogo}
 						onClick={() => {
 							navigate("/#home");
 						}}
 					>
-						Graphique
-					</p>
+						<img
+							src={logo}
+							alt="G-NFT Logo"
+							className={styles.navLogoImg}
+						/>
+						<p className={styles.navLogoText}>Graphique NFT</p>
+					</div>
 					{screenWidth > 600 ? (
 						<NavButtons />
 					) : (
