@@ -7,8 +7,10 @@ import NavButtons from "./NavButtons";
 import HamburgerIcon from "../../assets/hamburger-icon.svg";
 import searchIcon from "../../assets/searchicon.svg";
 import CloseIcon from "../../assets/close-icon.png";
+import favicon from "../../assets/favicon.ico";
 import { useNavigate } from "react-router-dom";
 import { mobileNavWidth } from "../../utils/constants";
+import { Helmet } from "react-helmet";
 
 const Navbar = () => {
 	const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
@@ -39,6 +41,9 @@ const Navbar = () => {
 
 	return (
 		<>
+			<Helmet>
+				<link rel="icon" href={favicon} />
+			</Helmet>
 			<span id="home"></span>
 			<div className={styles.navBarContainer}>
 				<div className={styles.navBar}>
