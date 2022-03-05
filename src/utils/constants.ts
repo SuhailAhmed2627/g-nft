@@ -1,1 +1,1 @@
-export const title = "Aaveg 2022";
+export const title = "G-NFT";
