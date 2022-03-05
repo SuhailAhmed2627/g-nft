@@ -1,0 +1,45 @@
+.bidsContainer {
+	width: 100%;
+	min-height: 35%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+	gap: 2%;
+	row-gap: max(30px, 5%);
+	color: var(--white);
+}
+
+.bidContainer {
+	padding: min(12px, 1.7%);
+	background-color: var(--black-3);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bidContainer > .image > img {
+	border-radius: 20px;
+}
+
+.title {
+	width: 100%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	padding-left: min(12px, 1.7%);
+	padding-right: min(12px, 1.7%);
+	text-align: start;
+}
+
+.info {
+	width: 100%;
+	padding-left: min(12px, 1.7%);
+	padding-right: min(12px, 1.7%);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 1.3%;
+}
