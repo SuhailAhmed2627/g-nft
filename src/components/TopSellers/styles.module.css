@@ -5,11 +5,14 @@
 	width: 100%;
 	height: 35vh;
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
+	flex-direction: row;
+	overflow-x: auto;
+	overflow-y: hidden;
+	justify-content: space-between;
 	align-items: center;
 	text-align: center;
-	flex-shrink: 0;
+	flex-wrap: nowrap;
+	gap: 2rem;
 }
 
 .sectionHeading {
@@ -30,6 +33,7 @@
 	align-items: center;
 	cursor: pointer;
 	text-decoration: none;
+	flex-shrink: 0;
 }
 .cardIndexContainer {
 	width: 100%;

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./App.module.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
@@ -9,7 +10,7 @@ import Item from "./pages/Item/Item";
 export const App = (): JSX.Element => {
 	//alert("pls be connected to the internet or fonts wont load :(");
 	return (
-		<>
+		<div className={styles.App}>
 			<NavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
@@ -18,6 +19,6 @@ export const App = (): JSX.Element => {
 				<Route path="*" element={/*<NotFound />*/ <></>}></Route>
 			</Routes>
 			<Footer />
-		</>
+		</div>
 	);
 };

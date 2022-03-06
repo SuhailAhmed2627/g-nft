@@ -50,7 +50,7 @@ const Navbar = () => {
 					<div
 						className={styles.navLogo}
 						onClick={() => {
-							navigate("/#home");
+							navigate("/");
 						}}
 					>
 						<img

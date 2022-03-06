@@ -15,10 +15,6 @@ body,
 	width: 100%;
 }
 
-#root {
-	gap: 10%;
-}
-
 :root {
 	--red-violet: #da18a3;
 	--red-linear: linear-gradient(

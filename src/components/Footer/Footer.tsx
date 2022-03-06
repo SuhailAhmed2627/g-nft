@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
-import logo from "../../assets/logo.png";
+import SiteMap from "./SiteMap";
+import { mobileNavWidth } from "../../utils/constants";
 
 const Footer = (): JSX.Element => {
+	const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+	useEffect(() => {
+		window.addEventListener("resize", () => {
+			setScreenWidth(window.innerWidth);
+		});
+	}, []);
 	return (
 		<div className={styles.footer}>
 			<div className={styles.mainFooter}>
@@ -31,19 +38,13 @@ const Footer = (): JSX.Element => {
 						</button>
 					</div>
 				</div>
-				<div className={styles.impLinks}>
-					<span className="h3">Graphique NFT</span>
-					<span className="p3-reg">Explore</span>
-					<span className="p3-reg">How it Works</span>
-					<span className="p3-reg">Contact Us</span>
-				</div>
-				<div className={styles.support}>
-					<span className="h3">Support</span>
-					<span className="p3-reg">Help center</span>
-					<span className="p3-reg">Terms of service</span>
-					<span className="p3-reg">Legal</span>
-					<span className="p3-reg">Privacy policy</span>
-				</div>
+				{screenWidth > mobileNavWidth ? (
+					<SiteMap />
+				) : (
+					<div className={styles.siteMapContainer}>
+						<SiteMap />
+					</div>
+				)}
 			</div>
 			<div className={styles.postFooter}>
 				<span className={styles.rights}>
