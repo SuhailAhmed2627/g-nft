@@ -17,4 +17,6 @@
 
 Pls use an internet connection as fonts are cdn based, so you wont have to reduce marks for incorrect fonts smh.
 
+We understand y'all can still goof up after all these instructions so here's a live deploy 🙄🙄: https://nervous-wright-a4dbcc.netlify.app
+
 Made with ❤️ by Mahmoud and Nikesh
