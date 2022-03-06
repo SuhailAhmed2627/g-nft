@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { PropTypes } from "./types";
 import { mobileNavWidth } from "../../utils/constants";
 import searchIcon from "../../assets/searchicon.svg";
 
 const NavButtons = (props: PropTypes) => {
+	const navigate = useNavigate();
 	return (
 		<>
 			{props.currentWidth > mobileNavWidth ? (
@@ -37,7 +38,12 @@ const NavButtons = (props: PropTypes) => {
 				{props.currentWidth > mobileNavWidth ? (
 					<>
 						<a className={styles.navButton}>
-							<button className={styles.navButtonGradient}>
+							<button
+								className={styles.navButtonGradient}
+								onClick={() => {
+									navigate("/create");
+								}}
+							>
 								Create
 							</button>
 						</a>
@@ -50,7 +56,12 @@ const NavButtons = (props: PropTypes) => {
 				) : (
 					<div className={styles.gradientButtonContainer}>
 						<a className={styles.navButton}>
-							<button className={styles.navButtonGradient}>
+							<button
+								className={styles.navButtonGradient}
+								onClick={() => {
+									navigate("/create");
+								}}
+							>
 								Create
 							</button>
 						</a>

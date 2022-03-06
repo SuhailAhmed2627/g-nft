@@ -102,3 +102,29 @@
 	display: inline-block;
 	color: var(--white);
 }
+
+.buttonBorderGradient {
+	background-image: var(--red-linear);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	border: 2px solid var(--red-violet);
+	width: 25%;
+}
+
+.loadMoreContainer {
+	margin-top: 4rem;
+}
+
+@media screen and (max-width: 800px) {
+	.buttonBorderGradient {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.buttonBorderGradient {
+		width: 70%;
+	}
+}

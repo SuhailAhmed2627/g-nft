@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import { Home } from "./pages/Home/Home";
 import Profile from "./pages/Profile/Profile";
 import Item from "./pages/Item/Item";
+import Create from "./pages/Create/Create";
 
 function createjscssfile(filename: string, filetype: string) {
 	let fileref;
@@ -78,6 +79,7 @@ export const App = (): JSX.Element => {
 				<Route path="/" element={<Home />} />
 				<Route path="/profile" element={<Profile />} />
 				<Route path="/item" element={<Item />} />
+				<Route path="/create" element={<Create />} />
 				<Route path="*" element={/*<NotFound />*/ <></>}></Route>
 			</Routes>
 			<Footer />

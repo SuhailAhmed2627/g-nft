@@ -158,6 +158,9 @@ const HotBids = (props: propTypes) => {
 					</Link>
 				))}
 			</div>
+			<div className={styles.loadMoreContainer}>
+				<button className={styles.buttonBorderGradient}>Load More</button>
+			</div>
 		</div>
 	);
 };

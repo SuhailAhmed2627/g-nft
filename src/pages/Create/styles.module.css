@@ -1,0 +1,52 @@
+.createPage {
+	width: 100%;
+	max-width: 70%;
+	margin-top: 4rem;
+}
+.createNew {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+.createNew > span {
+	color: var(--white);
+	text-align: left;
+}
+.uploadImg {
+	max-width: 80%;
+}
+.feilds {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 1rem;
+	align-items: left;
+	text-align: left;
+	margin-bottom: 4rem;
+}
+.feilds > span {
+	color: var(--white);
+}
+.nameInput {
+	height: 3rem;
+}
+.desInput {
+	height: 10rem;
+}
+.feilds > input {
+	width: 100%;
+	background-color: var(--black-1);
+	padding: 5px;
+	padding-left: 2rem;
+	border-radius: 10px;
+}
+.feilds > input::placeholder {
+	color: var(--white);
+}
+.navButtonGradient {
+	background: var(--red-linear);
+}
+.submitButtonContainer {
+	text-align: right;
+}

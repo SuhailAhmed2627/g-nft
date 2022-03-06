@@ -48,6 +48,11 @@
 		font-size: 40px;
 	}
 }
+@media screen and (max-width: 620px) {
+	.tagCard {
+		margin-top: 10rem;
+	}
+}
 @media screen and (max-width: 450px) {
 	.tag {
 		font-size: 27px;
