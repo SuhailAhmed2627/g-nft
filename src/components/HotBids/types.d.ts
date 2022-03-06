@@ -8,4 +8,5 @@ export interface bidInterface {
 
 export interface propTypes {
 	head?: boolean;
+	search?: boolean;
 }

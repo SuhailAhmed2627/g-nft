@@ -7,7 +7,7 @@ const Profile = (): JSX.Element => {
 	return (
 		<div className={styles.container + " flex-center"}>
 			<ProfileLanding />
-			<HotBids />
+			<HotBids search />
 		</div>
 	);
 };

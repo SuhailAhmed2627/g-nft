@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { bidInterface, propTypes } from "./types";
+import { mobileNavWidth } from "../../utils/constants";
 
 import one from "../../assets/bids/bid1.png";
 import two from "../../assets/bids/bid2.png";
@@ -10,6 +11,8 @@ import five from "../../assets/bids/bid5.png";
 import six from "../../assets/bids/bid6.png";
 import seven from "../../assets/bids/bid7.png";
 import eight from "../../assets/bids/bid8.png";
+import searchIcon from "../../assets/searchicon.svg";
+import downCaret from "../../assets/downcaret.svg";
 
 const bidDetails: bidInterface[] = [
 	{
@@ -71,8 +74,46 @@ const bidDetails: bidInterface[] = [
 ];
 
 const HotBids = (props: propTypes) => {
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+	useEffect(() => {
+		window.addEventListener("resize", () => {
+			setScreenWidth(window.innerWidth);
+		});
+	}, []);
 	return (
 		<div className={styles.sectionContainer}>
+			{props.search && mobileNavWidth < screenWidth ? (
+				<div className={styles.searchContainer}>
+					<div className={styles.searchBarContainer}>
+						<div className={styles.searchBar}>
+							<img
+								className={styles.searchBarIcon}
+								src={searchIcon}
+								alt="Search Icon"
+							/>
+							<input
+								className={styles.searchInput}
+								placeholder="Search Item Here"
+								type="text"
+							/>
+						</div>
+					</div>
+					<div className={styles.listBarContainer}>
+						<input
+							className={styles.searchInput}
+							placeholder="Recently Listed"
+							type="text"
+						/>
+						<img
+							className={styles.listBarImg}
+							src={downCaret}
+							alt="List"
+						/>
+					</div>
+				</div>
+			) : (
+				<span className={styles.header + " h3"}>Items</span>
+			)}
 			{props.head ? (
 				<div className={styles.sectionHeading + " h1"}>Hot Bids</div>
 			) : null}
