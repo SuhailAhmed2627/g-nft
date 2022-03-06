@@ -1,3 +1,6 @@
+.sellerSection {
+	width: 100%;
+}
 .outerContainer {
 	width: 100%;
 	height: 35vh;
@@ -6,7 +9,12 @@
 	justify-content: space-evenly;
 	align-items: center;
 	text-align: center;
-	margin-top: 10%;
+	flex-shrink: 0;
+}
+
+.sectionHeading {
+	text-align: left;
+	color: var(--white);
 }
 
 .cardContainer {
@@ -20,6 +28,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
 }
 .cardIndexContainer {
 	width: 100%;

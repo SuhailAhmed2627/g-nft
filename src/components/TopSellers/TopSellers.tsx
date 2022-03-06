@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 import one from "../../assets/sellers/1.png";
 import two from "../../assets/sellers/2.png";
 import three from "../../assets/sellers/3.png";
@@ -17,36 +18,49 @@ const sellers = [
 
 const TopSellers = () => {
 	return (
-		<div className={styles.outerContainer}>
-			{sellers.map((seller, index) => {
-				return (
-					<div className={styles.cardContainer} key={index}>
-						<div className={styles.cardIndexContainer}>
-							<div className={styles.cardIndex}>{index + 1}</div>
-						</div>
-						<div className={styles.cardImgContainer}>
-							<img
-								className={styles.sellerImg}
-								src={seller.img}
-								alt={seller.name}
-							/>
-							<div className={styles.checkImgContainer + " flex-center"}>
-								<img
-									className={styles.checkImg}
-									src={check}
-									alt="Check Icon"
-								/>
+		<div className={styles.sellerSection}>
+			<div className={styles.sectionHeading + " h1"}>Top Sellers</div>
+			<div className={styles.outerContainer}>
+				{sellers.map((seller, index) => {
+					return (
+						<Link
+							className={styles.cardContainer}
+							to="/profile"
+							key={index}
+						>
+							<div className={styles.cardContainer}>
+								<div className={styles.cardIndexContainer}>
+									<div className={styles.cardIndex}>{index + 1}</div>
+								</div>
+								<div className={styles.cardImgContainer}>
+									<img
+										className={styles.sellerImg}
+										src={seller.img}
+										alt={seller.name}
+									/>
+									<div
+										className={
+											styles.checkImgContainer + " flex-center"
+										}
+									>
+										<img
+											className={styles.checkImg}
+											src={check}
+											alt="Check Icon"
+										/>
+									</div>
+								</div>
+								<div className={styles.cardName + " p1-sem"}>
+									{seller.name}
+								</div>
+								<div className={styles.cardValue + " p1-sem"}>
+									{seller.value} <span className="p1-reg">ETH</span>
+								</div>
 							</div>
-						</div>
-						<div className={styles.cardName + " p1-sem"}>
-							{seller.name}
-						</div>
-						<div className={styles.cardValue + " p1-sem"}>
-							{seller.value} <span className="p1-reg">ETH</span>
-						</div>
-					</div>
-				);
-			})}
+						</Link>
+					);
+				})}
+			</div>
 		</div>
 	);
 };

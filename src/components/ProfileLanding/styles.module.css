@@ -1,0 +1,41 @@
+.profileLanding {
+	position: relative;
+}
+.profilebgImg {
+	width: 100vw;
+}
+.profileImgContainer {
+	position: absolute;
+	bottom: -75px;
+	left: calc(50% - 75px);
+	display: flex;
+	flex-direction: column;
+	color: var(--white);
+}
+.profileImg {
+	height: 150px;
+	width: auto;
+	border: 3px solid var(--black-4);
+	border-radius: 50%;
+}
+.searchBarIcon {
+	margin: 0.5rem;
+}
+.searchInput {
+	width: 100%;
+	caret-color: var(--white);
+	color: var(--white);
+}
+.searchInput::placeholder {
+	color: var(--white);
+}
+.searchBar {
+	background-color: var(--black-2);
+	height: 40px;
+	width: 97%;
+	margin: auto;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+}

@@ -10,7 +10,7 @@ export const Home = (): JSX.Element => {
 				<TagCard />
 			</div>
 			<TopSellers />
-			<HotBids />
+			<HotBids head />
 		</div>
 	);
 };
