@@ -7,6 +7,7 @@
 	padding-right: 7%;
 	height: 35vh;
 	text-align: left;
+	overflow: hidden;
 }
 
 .tag {
@@ -14,10 +15,13 @@
 	font-style: normal;
 	font-weight: bold;
 	font-size: 48px;
+	position: relative;
+	top: -70%;
 }
 
 .circle1,
 .circle2 {
+	position: relative;
 	min-width: 25vh;
 	min-height: 25vh;
 	border-radius: 50%;
@@ -25,11 +29,13 @@
 }
 
 .circle1 {
-	transform: translate(-150%, -50%);
+	left: -180%;
+	top: 10%;
 }
 
 .circle2 {
-	transform: translate(110%, 40%);
+	left: 170%;
+	top: 20%;
 }
 
 @media screen and (max-width: 1300px) {
@@ -40,14 +46,6 @@
 @media screen and (max-width: 900px) {
 	.tag {
 		font-size: 40px;
-	}
-}
-@media screen and (max-width: 630px) {
-	.tag {
-		font-size: 34px;
-	}
-	.tagCard {
-		height: 70%;
 	}
 }
 @media screen and (max-width: 450px) {
