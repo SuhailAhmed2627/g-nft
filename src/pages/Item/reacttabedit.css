@@ -8,3 +8,6 @@
 	border: none;
 	border-bottom: 1px solid #ffffff;
 }
+.react-tabs {
+	text-align: left;
+}

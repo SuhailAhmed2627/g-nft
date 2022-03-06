@@ -27,6 +27,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	color: var(--white);
+	text-decoration: none;
 }
 
 .bidContainer > .image > img {
@@ -61,6 +63,7 @@
 }
 .searchBarIcon {
 	margin: 0.5rem;
+	width: 20px;
 }
 .searchInput {
 	width: 100%;

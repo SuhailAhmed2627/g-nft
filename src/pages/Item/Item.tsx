@@ -69,9 +69,13 @@ const Item = (): JSX.Element => {
 							when an unknown printer took a galley of type and scrambled
 							it to make a type specimen book
 						</div>
-						<div>
-							<button type="button">Buy for 4.5 ETH</button>
-							<button type="button">Make Offer</button>
+						<div className={styles.gradientButtonContainer}>
+							<button className={styles.buttonGradient}>
+								Buy for 4.5 ETH
+							</button>
+							<button className={styles.buttonBorderGradient}>
+								Make Offer
+							</button>
 						</div>
 					</TabPanel>
 					<TabPanel>
@@ -82,9 +86,13 @@ const Item = (): JSX.Element => {
 							when an unknown printer took a galley of type and scrambled
 							it to make a type specimen book
 						</div>
-						<div>
-							<button type="button">Buy for 4.5 ETH</button>
-							<button type="button">Make Offer</button>
+						<div className={styles.gradientButtonContainer}>
+							<button className={styles.buttonGradient}>
+								Buy for 4.5 ETH
+							</button>
+							<button className={styles.buttonBorderGradient}>
+								Make Offer
+							</button>
 						</div>
 					</TabPanel>
 					<TabPanel>
@@ -95,9 +103,13 @@ const Item = (): JSX.Element => {
 							when an unknown printer took a galley of type and scrambled
 							it to make a type specimen book
 						</div>
-						<div>
-							<button type="button">Buy for 4.5 ETH</button>
-							<button type="button">Make Offer</button>
+						<div className={styles.gradientButtonContainer}>
+							<button className={styles.buttonGradient}>
+								Buy for 4.5 ETH
+							</button>
+							<button className={styles.buttonBorderGradient}>
+								Make Offer
+							</button>
 						</div>
 					</TabPanel>
 				</Tabs>
