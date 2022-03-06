@@ -13,8 +13,8 @@ export const App = (): JSX.Element => {
 			<NavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="profile/:id" element={<Profile />} />
-				<Route path="item/:id" element={<Item />} />
+				<Route path="/profile" element={<Profile />} />
+				<Route path="/item" element={<Item />} />
 				<Route path="*" element={/*<NotFound />*/ <></>}></Route>
 			</Routes>
 			<Footer />

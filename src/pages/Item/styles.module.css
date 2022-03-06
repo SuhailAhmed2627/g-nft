@@ -1,0 +1,54 @@
+.container {
+	display: flex;
+	flex-direction: row;
+
+	width: 100%;
+	height: 80vh;
+	padding-top: 72px;
+	color: var(--white);
+}
+
+.imageContainer {
+	width: 40%;
+	padding-left: 10%;
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	padding-top: 5%;
+	gap: 5%;
+}
+
+.titleAndLikes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.likesContainer {
+	height: 30px;
+}
+
+.likes {
+	border-radius: 22px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 100%;
+	border: 1px solid white;
+}
+
+.creatorImg {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
