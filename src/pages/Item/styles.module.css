@@ -86,6 +86,7 @@
 @media screen and (max-width: 700px) {
 	.container {
 		flex-direction: column;
+		margin-top: 4rem;
 	}
 	.imageContainer {
 		width: 100%;

@@ -15,6 +15,10 @@
 	gap: 2rem;
 }
 
+.outerContainer::-webkit-scrollbar {
+	display: none;
+}
+
 .sectionHeading {
 	text-align: left;
 	color: var(--white);
