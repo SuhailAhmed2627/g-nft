@@ -1,3 +1,10 @@
+.sectionContainer {
+	width: 100%;
+}
+.sectionHeading {
+	text-align: left;
+	color: var(--white);
+}
 .bidsContainer {
 	width: 100%;
 	min-height: 35%;
@@ -9,6 +16,7 @@
 	gap: 2%;
 	row-gap: max(30px, 5%);
 	color: var(--white);
+	margin-top: 1.5rem;
 }
 
 .bidContainer {
