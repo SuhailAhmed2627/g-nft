@@ -38,7 +38,11 @@ const Item = (): JSX.Element => {
 				style={customStyles}
 				contentLabel="Example Modal"
 			>
-				<h2>Meow</h2>
+				<div className={styles.checkoutModal}>
+					<div className={styles.modalHeader}></div>
+					<div className={styles.modalConent}></div>
+					<div className={styles.modalFooter}></div>
+				</div>
 			</Modal>
 			<div className={styles.container}>
 				<div className={styles.imageContainer + " flex-center"}>
