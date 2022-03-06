@@ -1,0 +1,122 @@
+.footer {
+	width: 100%;
+	height: 40vh;
+	border-top: 1px solid var(--black-1);
+	color: var(--white);
+}
+
+.mainFooter {
+	height: 75%;
+}
+
+.mainFooter,
+.postFooter {
+	padding-left: 12.5%;
+	padding-right: 12.5%;
+}
+
+.postFooter {
+	height: 25%;
+	border-top: 1px solid var(--black-1);
+}
+
+.mainFooter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.updates,
+.impLinks,
+.support {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.updates {
+	width: 40%;
+}
+
+.impLinks,
+.support {
+	width: 20%;
+}
+
+.updates {
+	align-items: flex-start !important;
+	justify-content: space-evenly !important;
+}
+
+.graphiqueLogo {
+	font-family: "Gotham", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+	height: max-content;
+	flex-direction: row !important;
+	gap: 5px;
+}
+
+.email {
+	width: 100%;
+	height: 35px;
+	flex-direction: row !important;
+}
+
+.emailInput {
+	background-color: var(--black-2);
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 35%;
+
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 105.7%;
+	color: #ffffff;
+}
+
+.emailButton {
+	position: absolute;
+	height: 35px;
+	border-radius: 10px;
+	background: var(--red-linear);
+	transform: translateX(125%);
+	padding-left: 2%;
+	padding-right: 2%;
+
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 21px;
+	z-index: 200;
+}
+
+.impLinks,
+.support {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 2.5%;
+	padding: 2.5%;
+}
+
+.postFooter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.socials {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
